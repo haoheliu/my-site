@@ -44,7 +44,7 @@
       position: absolute;
       bottom: 0;
       width: 100%;
-      height: 100px;
+      height: 303px;
       /* Set the fixed height of the footer here */
       /*height: 50px;*/
       background-color: #0d1d31;
@@ -150,8 +150,8 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="thumbnail">
-                            <div class="pic" style="background: url(resources/pics/temp.png);">
-                                <!-- <img src="resources/pics/demos_codes.png">  -->
+                            <div class="pic">
+                                <img class="main_pic" src="resources/pics/demo.png"> 
                             </div>
                             <div class="caption">
                                 <!-- <h3>Demos of my researches/projects</h3> -->
@@ -162,8 +162,8 @@
                     </div>
                     <div class="col-sm-6">
                         <div class="thumbnail">
-                            <div class="pic" style="background: url(resources/pics/temp.png);">
-                                <!-- <img src="resources/pics/demos_codes.png">  -->
+                            <div class="pic">
+                                <img class="main_pic" src="resources/pics/contact.png"> 
                             </div>
                             <div class="caption">
                                 <!-- <h3>Thumbnail label</h3> -->
@@ -176,8 +176,8 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="thumbnail">
-                            <div class="pic" style="background: url(resources/pics/temp.png);">
-                                <!-- <img src="resources/pics/demos_codes.png">  -->
+                            <div class="pic">
+                                <img class="main_pic" src="resources/pics/blog.png"> 
                             </div>
                             <div class="caption">
                                 <!-- <h3>Thumbnail label</h3> -->
@@ -188,8 +188,8 @@
                     </div>
                     <div class="col-sm-6">
                         <div class="thumbnail">
-                            <div class="pic" style="background: url(resources/pics/temp.png);">
-                                <!-- <img src="resources/pics/demos_codes.png">  -->
+                            <div class="pic">
+                                <img class="main_pic" src="resources/pics/temp.png"> 
                             </div>
                             <div class="caption">
                                 <!-- <h3>Thumbnail label</h3> -->
@@ -203,17 +203,19 @@
         </div>
     </div>
     <script type="text/javascript">
-    function setImg(w, h) {
+    function setImg() {
         // var imgList = document.getElementsByTagName('img');
-        var imgList = document.getElementsByClassName("pic");
+        var imgList = document.getElementsByClassName("main_pic");
+        var o = document.getElementsByClassName("pic")[0];
+        var w = o.clientWidth||o.offsetWidth;
+        console.log(w)
         for (var i = 0; i < imgList.length; i++) {
             // if(imgList[i].width>w || imgList[i].height>h){
             imgList[i].width = w;
-            imgList[i].height = h;
             // }
         }
     }
-    setImg(100, 100);
+    setImg();
     </script>
     </div>
     </div>
@@ -262,10 +264,11 @@
                 </span>
             </p>
             <div class="map">
-                <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=n&d=jRXjudFGkIkYjBTvxEI7oeMud9FZ_-AJye9oyqD7glE&co=0d1d31'></script>
+                <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=200&t=n&d=jRXjudFGkIkYjBTvxEI7oeMud9FZ_-AJye9oyqD7glE&co=0d1d31'></script>
                 <!-- <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=000000&w=500&t=n&d=jRXjudFGkIkYjBTvxEI7oeMud9FZ_-AJye9oyqD7glE&co=ffffff'></script> -->
             </div>
         </div>
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     </footer>
 </body>
 
