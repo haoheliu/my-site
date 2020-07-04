@@ -17,7 +17,6 @@
     <link href="./meteors/demo.css" rel="stylesheet" media="all">
     <link rel="icon" href="favicon.ico" />
     <!--[if IE]>
-
     <style type="text/css">
         li.remove_frame a {
             padding-top: 5px;
@@ -44,14 +43,15 @@
       position: absolute;
       bottom: 0;
       width: 100%;
-      height: 303px;
+      height: 403px;
       /* Set the fixed height of the footer here */
       /*height: 50px;*/
       background-color: #0d1d31;
 }
 
     h1 {
-        font-size: 40px
+        font-size: 40px;
+        margin-bottom: 10px;
     }
 
     h2 {
@@ -139,36 +139,37 @@
 </nav> -->
     <div>
         <div>
-            <iframe id="iframe" src="./meteors/index.html" frameborder="0" width="100%" height="843px"></iframe>
+            <iframe id="meteor" src="./meteors/index.html" frameborder="0" width="100%" height="343px"></iframe>
         </div>
-        <div style="position: absolute; top: 100px; left: 20%;">
-            <div class="container" style="margin-bottom: 50px;">
-                <h1 style="font-size:60px; color: #ffffff; ">Welcome to Haohe Liu's cite</h1>
+        <div >
+            <div class="container" style="position: absolute; top: 100px; left: 20%">
+                <h1 style="font-size:40px; color: #ffffff; "><i class="fa fa-user-circle" aria-hidden="true"></i>  Welcome to Haohe Liu's site </h1>
+                <h1 style="font-size:40px; color: #ffffff; ">好河流的小黑屋</h1>
+                <p style="color: #33ADE8"><i class="fa fa-hand-peace-o" aria-hidden="true"></i> All is well </p>
             </div>
-            <div class="container">
-                <p style="color: #ffffff; margin-bottom: 50px;">Check out the options below:</p>
+            <div id="entry" class="container" style="margin-top: 50px;">
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="thumbnail">
                             <div class="pic">
-                                <img class="main_pic" src="resources/pics/demo.png"> 
+                                <a href="#demos"><img class="main_pic" src="resources/pics/demo.png"> </a>
                             </div>
                             <div class="caption">
                                 <!-- <h3>Demos of my researches/projects</h3> -->
                                 <!-- <p>...</p> -->
-                                <p><a href="#demos" class="btn btn-primary" role="button" style="font-size: 20px">Demos & Codes</a> </p>
+                                <p><a href="#demos" class="btn btn-primary" role="button" style="font-size: 20px"><i class="fa fa-code" aria-hidden="true"></i>  Demos & Codes</a> </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="thumbnail">
                             <div class="pic">
-                                <img class="main_pic" src="resources/pics/contact.png"> 
+                                <a href="http://blog.haoheliu.com/about/"><img  class="main_pic" src="resources/pics/contact.png"> </a>
                             </div>
                             <div class="caption">
                                 <!-- <h3>Thumbnail label</h3> -->
                                 <!-- <p>...</p> -->
-                                <p><a href="http://blog.haoheliu.com/about/" class="btn btn-primary" role="button" style="font-size: 20px">About & Contact</a></p>
+                                <p><a href="http://blog.haoheliu.com/about/" class="btn btn-primary" role="button" style="font-size: 20px"><i class="fa fa-phone" aria-hidden="true"></i> About & Contact</a></p>
                             </div>
                         </div>
                     </div>
@@ -177,24 +178,24 @@
                     <div class="col-sm-6">
                         <div class="thumbnail">
                             <div class="pic">
-                                <img class="main_pic" src="resources/pics/blog.png"> 
+                                <a href="http://blog.haoheliu.com"><img class="main_pic" src="resources/pics/blog.png"> </a>
                             </div>
                             <div class="caption">
                                 <!-- <h3>Thumbnail label</h3> -->
                                 <!-- <p>...</p> -->
-                                <p><a href="http://blog.haoheliu.com" class="btn btn-primary" role="button" style="font-size: 20px">Blogs</a> </p>
+                                <p><a href="http://blog.haoheliu.com" class="btn btn-primary" role="button" style="font-size: 20px"><i class="fa fa-rocket" aria-hidden="true"></i> Blogs</a> </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="thumbnail">
                             <div class="pic">
-                                <img class="main_pic" src="resources/pics/temp.png"> 
+                                <a href="#"><img class="main_pic" src="resources/pics/temp.png"> </a>
                             </div>
                             <div class="caption">
                                 <!-- <h3>Thumbnail label</h3> -->
                                 <!-- <p>...</p> -->
-                                <p><a href="#" class="btn btn-default" role="button" style="font-size: 20px">Recent activities (under construction)</a></p>
+                                <p><a href="#" class="btn btn-default" role="button" style="font-size: 20px"><i class="fa fa-plane" aria-hidden="true"></i> Recent activities (under construction)</a></p>
                             </div>
                         </div>
                     </div>
@@ -208,7 +209,6 @@
         var imgList = document.getElementsByClassName("main_pic");
         var o = document.getElementsByClassName("pic")[0];
         var w = o.clientWidth||o.offsetWidth;
-        console.log(w)
         for (var i = 0; i < imgList.length; i++) {
             // if(imgList[i].width>w || imgList[i].height>h){
             imgList[i].width = w;
@@ -216,32 +216,45 @@
         }
     }
     setImg();
+    // var entry_height = document.getElementById("entry").style
+    // console.log(2)
+    // console.log(entry_height)
+    // meteor.height = entry_height
     </script>
     </div>
     </div>
     <div class="container">
-        <hr>
-        <h2>
-            Still under Construction...
-        </h2>
-        <hr>
-        <h1 id="demos">
-            Demos
+
+        <h1 id="demos" >
+            Demos | 主要成果展示
         </h1>
         <div>
             <div class="list-group">
                 <a href="https://haoheliu.github.io/Channel-wise-Subband-Input/resources/paper/Paper-Channel-wise%20Subband%20Input%20for%20Better%20Voice%20and%20Accompaniment%20Separation%20on%20High%20Resolution%20Music.pdf" class="list-group-item active" style="font-size: 20px">
-                    <b>Music Separations (Voice and accompaniments)</b>
+                    <b>Music Separations (Voice and accompaniments) | 音乐和人声分离</b>
                 </a>
-                <a href="https://mp.weixin.qq.com/s/thk6FOYR9wKPWkCD5NOM-A" class="list-group-item">Demo page on Wechat push <i class="fa fa-external-link"></i></a>
-                <a href="https://haoheliu.github.io/Channel-wise-Subband-Input/" class="list-group-item">Demo page with more songs <i class="fa fa-external-link"></i></a>
-                <a href="https://github.com/haoheliu/Subband-Music-Separation" class="list-group-item">Code on Github <i class="fa fa-external-link"></i></a>
+                <a href="https://mp.weixin.qq.com/s/thk6FOYR9wKPWkCD5NOM-A" class="list-group-item">Demo page on Wechat push ｜ 微信推送 <i class="fa fa-external-link"></i></a>
+                <a href="https://haoheliu.github.io/Channel-wise-Subband-Input/" class="list-group-item">Demo page with more songs ｜ 示例网页 <i class="fa fa-external-link"></i></a>
+                <a href="https://github.com/haoheliu/Subband-Music-Separation" class="list-group-item">Code on Github ｜ 项目代码 <i class="fa fa-external-link"></i></a>
             </div>
             <!-- <ul>
             <li><a href="" style="color: #000000">- </a></li>
             <li><a href="/" style="color: #000000">- </a></li>
         </ul> -->
         </div>
+    </div>
+    <hr>
+    <div class="container">
+        <h1 id="recent-activities" >
+            Recent Activities | 近期活动
+        </h1>
+        <div class=""></div>
+
+                <hr>
+        <h2>
+            Still under Construction...
+        </h2>
+        <hr>
     </div>
     <footer class="footer " style="position: absolute;bottom: auto">
         <div class="container" style="margin-top:20px; text-align: center">
@@ -264,7 +277,7 @@
                 </span>
             </p>
             <div class="map">
-                <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=200&t=n&d=jRXjudFGkIkYjBTvxEI7oeMud9FZ_-AJye9oyqD7glE&co=0d1d31'></script>
+                <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=n&d=jRXjudFGkIkYjBTvxEI7oeMud9FZ_-AJye9oyqD7glE&co=0d1d31'></script>
                 <!-- <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=000000&w=500&t=n&d=jRXjudFGkIkYjBTvxEI7oeMud9FZ_-AJye9oyqD7glE&co=ffffff'></script> -->
             </div>
         </div>
