@@ -6,13 +6,10 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
     <title>NWPU | Haohe Liu</title>
     <link href="./index/bootstrap.min.css" rel="stylesheet" />
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!-- <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script> -->
+    <!-- <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
     <link href="./index/ie10-viewport-bug-workaround.css" rel="stylesheet" />
-    <!-- Custom styles for this template -->
-    <!-- <link href="./index/blog.css" rel="stylesheet" /> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="./index/ie-emulation-modes-warning.js"></script>
     <link href="./meteors/demo.css" rel="stylesheet" media="all">
     <link rel="icon" href="favicon.ico" />
@@ -39,15 +36,15 @@
     }
 
     .footer {
-    color: #ffffff;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 403px;
-      /* Set the fixed height of the footer here */
-      /*height: 50px;*/
-      background-color: #0d1d31;
-}
+        color: #ffffff;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 403px;
+        /* Set the fixed height of the footer here */
+        /*height: 50px;*/
+        background-color: #0d1d31;
+    }
 
     h1 {
         font-size: 40px;
@@ -141,11 +138,20 @@
         <div>
             <iframe id="meteor" src="./meteors/index.html" frameborder="0" width="100%" height="343px"></iframe>
         </div>
-        <div >
+        <div>
             <div class="container" style="position: absolute; top: 100px; left: 20%">
-                <h1 style="font-size:40px; color: #ffffff; "><i class="fa fa-user-circle" aria-hidden="true"></i>  Welcome to Haohe Liu's site </h1>
+                <h1 style="font-size:40px; color: #ffffff; "><i class="fa fa-user-circle" aria-hidden="true"></i> Welcome to Haohe Liu's site </h1>
                 <h1 style="font-size:40px; color: #ffffff; ">好河流的小黑屋</h1>
                 <p style="color: #33ADE8"><i class="fa fa-hand-peace-o" aria-hidden="true"></i> All is well </p>
+                <!-- <div class="btn-group" style="margin-top: 20px;">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        语言 language <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">English</a></li>
+                        <li><a href="./index_zh_CH.html">简体中文</a></li>                                             
+                    </ul>
+                </div> -->
             </div>
             <div id="entry" class="container" style="margin-top: 50px;">
                 <div class="row">
@@ -157,14 +163,14 @@
                             <div class="caption">
                                 <!-- <h3>Demos of my researches/projects</h3> -->
                                 <!-- <p>...</p> -->
-                                <p><a href="#demos" class="btn btn-primary" role="button" style="font-size: 20px"><i class="fa fa-code" aria-hidden="true"></i>  Demos & Codes</a> </p>
+                                <p><a href="#demos" class="btn btn-primary" role="button" style="font-size: 20px"><i class="fa fa-code" aria-hidden="true"></i> Demos & Codes</a> </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="thumbnail">
                             <div class="pic">
-                                <a href="http://blog.haoheliu.com/about/"><img  class="main_pic" src="resources/pics/contact.png"> </a>
+                                <a href="http://blog.haoheliu.com/about/"><img class="main_pic" src="resources/pics/contact.png"> </a>
                             </div>
                             <div class="caption">
                                 <!-- <h3>Thumbnail label</h3> -->
@@ -195,7 +201,7 @@
                             <div class="caption">
                                 <!-- <h3>Thumbnail label</h3> -->
                                 <!-- <p>...</p> -->
-                                <p><a href="#" class="btn btn-default" role="button" style="font-size: 20px"><i class="fa fa-plane" aria-hidden="true"></i> Recent activities (under construction)</a></p>
+                                <p><a href="#recent-activities" class="btn btn-primary" role="button" style="font-size: 20px"><i class="fa fa-plane" aria-hidden="true"></i> Recent activities</a></p>
                             </div>
                         </div>
                     </div>
@@ -208,7 +214,7 @@
         // var imgList = document.getElementsByTagName('img');
         var imgList = document.getElementsByClassName("main_pic");
         var o = document.getElementsByClassName("pic")[0];
-        var w = o.clientWidth||o.offsetWidth;
+        var w = o.clientWidth || o.offsetWidth;
         for (var i = 0; i < imgList.length; i++) {
             // if(imgList[i].width>w || imgList[i].height>h){
             imgList[i].width = w;
@@ -224,8 +230,7 @@
     </div>
     </div>
     <div class="container">
-
-        <h1 id="demos" >
+        <h1 id="demos">
             Demos | 主要成果展示
         </h1>
         <div>
@@ -245,15 +250,20 @@
     </div>
     <hr>
     <div class="container">
-        <h1 id="recent-activities" >
+        <h1 id="recent-activities">
             Recent Activities | 近期活动
         </h1>
-        <div class=""></div>
+        <div class="list-group">
+        	<a href="#" class="list-group-item ">
+                <!-- <h4 class="list-group-item-heading">List group item heading</h4> -->
+                <p class="list-group-item-text"><b>2020/07/16</b> | I decide to defer my admission to OSU to 21SP.</p>
+            </a>
+            <a href="#" class="list-group-item ">
+                <!-- <h4 class="list-group-item-heading">List group item heading</h4> -->
+                <p class="list-group-item-text"><b>2020/07/10</b> | I got the degree of Bachelor of Engineering from Northwestern Polytechnical University.</p>
 
-                <hr>
-        <h2>
-            Still under Construction...
-        </h2>
+            </a>
+        </div>
         <hr>
     </div>
     <footer class="footer " style="position: absolute;bottom: auto">
